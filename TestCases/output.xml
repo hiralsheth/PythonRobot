@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.7 on darwin)" generated="2025-07-30T22:16:03.301256" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.7 on darwin)" generated="2025-07-30T23:05:23.513058" rpa="false" schemaversion="5">
 <suite id="s1" name="TC1" source="/Users/hiralsheth/PycharmProjects/pythonProjectRobot/TestCases/TC1.robot">
 <test id="s1-t1" name="LoginTest with valid credentials" line="11">
 <kw name="Open Browser To Login Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-30T22:16:03.465462" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg time="2025-07-30T23:05:23.790202" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-30T22:16:03.465192" elapsed="4.335087"/>
+<status status="PASS" start="2025-07-30T23:05:23.789977" elapsed="4.857878"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-30T22:16:07.800789" elapsed="0.402748"/>
+<status status="PASS" start="2025-07-30T23:05:28.648407" elapsed="0.410959"/>
 </kw>
-<status status="PASS" start="2025-07-30T22:16:03.464339" elapsed="4.739375"/>
+<status status="PASS" start="2025-07-30T23:05:23.789387" elapsed="5.270192"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-30T22:16:08.204141" elapsed="0.125862"/>
+<status status="PASS" start="2025-07-30T23:05:29.060037" elapsed="0.095689"/>
 </kw>
-<status status="PASS" start="2025-07-30T22:16:03.462779" elapsed="4.867376"/>
+<status status="PASS" start="2025-07-30T23:05:23.788871" elapsed="5.367055"/>
 </test>
-<status status="PASS" start="2025-07-30T22:16:03.303633" elapsed="5.027094"/>
+<status status="PASS" start="2025-07-30T23:05:23.514132" elapsed="5.642410"/>
 </suite>
 <statistics>
 <total>

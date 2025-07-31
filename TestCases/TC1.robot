@@ -29,10 +29,11 @@ LoginTest with valid credentials
 #    Page Should Contain    Thank you
 
 *** Keywords ***
-*** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${URL}    ${BROWSER}    options=--headless=new --no-sandbox --disable-dev-shm-usage
+    Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
+
+
 
 
 
