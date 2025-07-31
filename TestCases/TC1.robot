@@ -31,6 +31,7 @@ LoginTest with valid credentials
 *** Keywords ***
 Open Browser To Login Page
     Open Browser    ${URL}    ${BROWSER}
+    ...    options=add_argument(--user-data-dir=/tmp/chrome-profile)
     Maximize Browser Window
 
 
