@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1850a25e-f8fe-4fc9-9f5b-dc8ddee05371" name="Changes" comment="TC1Robot" />
+    <list default="true" id="1850a25e-f8fe-4fc9-9f5b-dc8ddee05371" name="Changes" comment="Robot framework CI/CD pipeline">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/TC1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/TC1.robot" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +16,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "hiralsheth"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hiralsheth/PythonRobot.git",
+    "accountId": "16fa4859-d8d6-4b00-8efe-abe42b5af7bc"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -33,6 +48,11 @@
     "ChangesTree.GroupingKeys": []
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProjectRobot" />
@@ -81,7 +101,31 @@
       <option name="project" value="LOCAL" />
       <updated>1753928330642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="TC1Robot">
+      <option name="closed" value="true" />
+      <created>1753929205543</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1753929205543</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TC1Robot">
+      <option name="closed" value="true" />
+      <created>1753929228472</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1753929228472</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Robot framework CI/CD pipeline">
+      <option name="closed" value="true" />
+      <created>1753929685040</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753929685040</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +141,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TC1Robot" />
-    <option name="LAST_COMMIT_MESSAGE" value="TC1Robot" />
+    <MESSAGE value="Robot framework CI/CD pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Robot framework CI/CD pipeline" />
   </component>
 </project>
