@@ -30,9 +30,25 @@ LoginTest with valid credentials
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${URL}    ${BROWSER}
-    ...    options=add_argument(--user-data-dir=/tmp/chrome-profile)
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    ${arg1}=       Set Variable    --headless=new
+    ${arg2}=       Set Variable    --no-sandbox
+    ${arg3}=       Set Variable    --disable-dev-shm-usage
+    ${arg4}=       Set Variable    --user-data-dir=/tmp/chrome-profile
+
+    Call Method    ${options}    add_argument    ${arg1}
+    Call Method    ${options}    add_argument    ${arg2}
+    Call Method    ${options}    add_argument    ${arg3}
+    Call Method    ${options}    add_argument    ${arg4}
+
+    Create WebDriver    Chrome    options=${options}
+    Go To    ${URL}
     Maximize Browser Window
+
+
+
+
+
 
 
 
