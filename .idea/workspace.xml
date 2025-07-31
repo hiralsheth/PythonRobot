@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1850a25e-f8fe-4fc9-9f5b-dc8ddee05371" name="Changes" comment="Robot framework CI/CD pipeline">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestCases/TC1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/TC1.robot" afterDir="false" />
-    </list>
+    <list default="true" id="1850a25e-f8fe-4fc9-9f5b-dc8ddee05371" name="Changes" comment="Robot framework CI/CD pipeline" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +122,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753929685040</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Robot framework CI/CD pipeline">
+      <option name="closed" value="true" />
+      <created>1753929960660</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753929960660</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Robot framework CI/CD pipeline">
+      <option name="closed" value="true" />
+      <created>1753930285177</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1753930285177</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
