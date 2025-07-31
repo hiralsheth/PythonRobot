@@ -29,8 +29,10 @@ LoginTest with valid credentials
 #    Page Should Contain    Thank you
 
 *** Keywords ***
+*** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${URL}    ${BROWSER}    options=add_argument(--headless=new)  add_argument(--no-sandbox)  add_argument(--disable-dev-shm-usage)
+    Open Browser    ${URL}    ${BROWSER}    options=--headless=new --no-sandbox --disable-dev-shm-usage
     Maximize Browser Window
+
 
 
