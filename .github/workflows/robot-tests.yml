@@ -35,7 +35,7 @@ jobs:
 
       - name: 🤖 Run Robot Tests
         run: |
-          robot tests/
+          robot TestCases/
 
       - name: 📄 Upload Robot Reports
         uses: actions/upload-artifact@v4
