@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}     https://demo.nopcommerce.com/
+${URL}     https://demo.nopcommerce.com/login?returnUrl=%2F
 ${BROWSER}    chrome
 ${USERNAME}    testuser
 ${PASSWORD}    testpass
@@ -10,10 +10,11 @@ ${PASSWORD}    testpass
 *** Test Cases ***
 LoginTest with valid credentials
     Open Browser To Login Page
-#    Input Text    id=username    ${USERNAME}
-#    Input Text    id=password    ${PASSWORD}
-#    Click Button    id=login-button
-#    Page Should Contain    Welcome
+    Input Text    id=Email    ${USERNAME}
+    Input Text    id=Password    ${PASSWORD}
+    Click Button    class=login-button
+    Page Should Contain    Welcome
+    Capture Page Screenshot
     [Teardown]    Close Browser
 
 #Invalid Email Should Show Error
@@ -31,12 +32,12 @@ LoginTest with valid credentials
 *** Keywords ***
 Open Browser To Login Page
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-    ${arg1}=       Set Variable    --headless=new
+ #   ${arg1}=       Set Variable    --headless=new
     ${arg2}=       Set Variable    --no-sandbox
     ${arg3}=       Set Variable    --disable-dev-shm-usage
     ${arg4}=       Set Variable    --user-data-dir=/tmp/chrome-profile
 
-    Call Method    ${options}    add_argument    ${arg1}
+  #  Call Method    ${options}    add_argument    ${arg1}
     Call Method    ${options}    add_argument    ${arg2}
     Call Method    ${options}    add_argument    ${arg3}
     Call Method    ${options}    add_argument    ${arg4}
