@@ -32,18 +32,20 @@ LoginTest with valid credentials
 *** Keywords ***
 Open Browser To Login Page
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-    ${arg1}=       Set Variable    --headless=new
+   # ${arg1}=       Set Variable    --headless=new
     ${arg2}=       Set Variable    --no-sandbox
     ${arg3}=       Set Variable    --disable-dev-shm-usage
     ${arg4}=       Set Variable    --user-data-dir=/tmp/chrome-profile
 
-    Call Method    ${options}    add_argument    ${arg1}
+   # Call Method    ${options}    add_argument    ${arg1}
     Call Method    ${options}    add_argument    ${arg2}
     Call Method    ${options}    add_argument    ${arg3}
     Call Method    ${options}    add_argument    ${arg4}
 
     Create WebDriver    Chrome    options=${options}
+    Delete All Cookies
     Go To    ${URL}
+    Wait Until Element Is Visible    class=login-button    timeout=10s
     Maximize Browser Window
 
 
