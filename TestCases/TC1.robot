@@ -4,8 +4,8 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}     https://demo.nopcommerce.com/login?returnUrl=%2F
 ${BROWSER}    chrome
-${USERNAME}    testuser
-${PASSWORD}    testpass
+${USERNAME}    hiral.sheth276@gmail.com
+${PASSWORD}    password
 
 *** Test Cases ***
 LoginTest with valid credentials
