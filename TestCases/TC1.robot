@@ -2,32 +2,25 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}     https://demo.nopcommerce.com/login?returnUrl=%2F
+${URL}     https://parabank.parasoft.com/parabank/index.htm
 ${BROWSER}    chrome
-${USERNAME}    hiral.sheth276@gmail.com
-${PASSWORD}    password
+${TXT_USERNAME}      name=username
+${USERNAME}   john
+${TXT_PASSWORD}      name=password
+${PASSWORD}    demo
+${BTN_LOGIN}         css=input[value="Log In"]
+${SUCCESS_TEXT}      Accounts Overview
 
 *** Test Cases ***
 LoginTest with valid credentials
     Open Browser To Login Page
-    Input Text    id=Email    ${USERNAME}
-    Input Text    id=Password    ${PASSWORD}
-    Click Button    class=login-button
-    Page Should Contain    Welcome
+    Input Text        ${TXT_USERNAME}    ${USERNAME}
+    Input Password    ${TXT_PASSWORD}    ${PASSWORD}
+    Click Button      ${BTN_LOGIN}
+    Page Should Contain    ${SUCCESS_TEXT}
     Capture Page Screenshot
     [Teardown]    Close Browser
 
-#Invalid Email Should Show Error
-#    Input Text    id=email    invalidemail
-#    Input Text    id=password    ${PASSWORD}
-#    Click Button    id=login-button
-#    Page Should Contain    Invalid email address
-#
-#Valid Email Should Proceed
-#    Input Text    id=email    user@example.com
-#    Input Text    id=password    ${PASSWORD}
-#    Click Button    id=login-button
-#    Page Should Contain    Thank you
 
 *** Keywords ***
 Open Browser To Login Page
@@ -45,7 +38,6 @@ Open Browser To Login Page
     Create WebDriver    Chrome    options=${options}
     Delete All Cookies
     Go To    ${URL}
-    Wait Until Element Is Visible    class=login-button    timeout=10s
     Maximize Browser Window
 
 
