@@ -2,53 +2,71 @@ name: Run Robot Framework Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   robot-tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: 📥 Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+          cache: 'pip'
 
       - name: 📦 Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🧰 Install Google Chrome
+      - name: 🌐 Check Google Chrome
         run: |
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
+          if command -v google-chrome >/dev/null 2>&1; then
+            echo "Google Chrome is already installed."
+            google-chrome --version
+          else
+            echo "Installing Google Chrome..."
+            wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt-get update
+            sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
+            google-chrome --version
+          fi
 
-      - name: 📥 Install matching ChromeDriver
+      - name: 🚗 Install Matching ChromeDriver
         run: |
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-          DRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json" \
-            | jq -r --arg ver "$CHROME_VERSION" '.channels.Stable.version')
-          wget "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/${DRIVER_VERSION}/linux64/chromedriver-linux64.zip"
-          unzip chromedriver-linux64.zip
+          sudo apt-get update
+          sudo apt-get install -y jq unzip
+
+          DRIVER_VERSION=$(curl -s https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json \
+            | jq -r '.channels.Stable.version')
+
+          wget -q "https://storage.googleapis.com/chrome-for-testing-public/${DRIVER_VERSION}/linux64/chromedriver-linux64.zip"
+
+          unzip -o chromedriver-linux64.zip
+
           sudo mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver
           sudo chmod +x /usr/local/bin/chromedriver
 
+          echo "ChromeDriver Version:"
+          chromedriver --version
 
-      - name: 🤖 Run Robot Tests
+      - name: 🤖 Run Robot Framework Tests
         run: |
-          robot TestCases/
+          mkdir -p results
+          robot --outputdir results TestCases/
 
       - name: 📄 Upload Robot Reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Robot-Reports
-          path: |
-            log.html
-            output.xml
-            report.html
+          path: results/
