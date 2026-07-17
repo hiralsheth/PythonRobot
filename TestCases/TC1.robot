@@ -26,18 +26,20 @@ LoginTest with valid credentials
 Open Browser To Login Page
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
 
-    Call Method    ${options}    add_argument    --headless=new
-    Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    ${headless}=    Set Variable    --headless=new
+    ${nosandbox}=    Set Variable    --no-sandbox
+    ${disabledev}=    Set Variable    --disable-dev-shm-usage
+
+    Call Method    ${options}    add_argument    ${headless}
+    Call Method    ${options}    add_argument    ${nosandbox}
+    Call Method    ${options}    add_argument    ${disabledev}
 
     Open Browser
     ...    ${URL}
-    ...    browser=${BROWSER}
+    ...    ${BROWSER}
     ...    options=${options}
 
     Maximize Browser Window
-
-
 
 
 
