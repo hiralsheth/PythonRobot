@@ -64,7 +64,7 @@ jobs:
           mkdir -p results
           robot --outputdir results TestCases/
 
-      - name: 📄 Upload Robot Reports
+      - name: 📄 Upload Robot Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
