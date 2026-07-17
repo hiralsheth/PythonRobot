@@ -1,28 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.7 on darwin)" generated="2025-07-30T23:05:23.513058" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.7 on darwin)" generated="2025-07-30T23:18:48.668374" rpa="false" schemaversion="5">
 <suite id="s1" name="TC1" source="/Users/hiralsheth/PycharmProjects/pythonProjectRobot/TestCases/TC1.robot">
 <test id="s1-t1" name="LoginTest with valid credentials" line="11">
 <kw name="Open Browser To Login Page">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-30T23:05:23.790202" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-07-30T23:18:48.810813" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1032b87a0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.810550" elapsed="0.000306"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-30T23:18:48.811120" level="INFO">${arg1} = --headless=new</msg>
+<var>${arg1}</var>
+<arg>--headless=new</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.810983" elapsed="0.000167"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-30T23:18:48.811362" level="INFO">${arg2} = --no-sandbox</msg>
+<var>${arg2}</var>
+<arg>--no-sandbox</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.811248" elapsed="0.000140"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-30T23:18:48.811596" level="INFO">${arg3} = --disable-dev-shm-usage</msg>
+<var>${arg3}</var>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.811480" elapsed="0.000142"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-07-30T23:18:48.811830" level="INFO">${arg4} = --user-data-dir=/tmp/chrome-profile</msg>
+<var>${arg4}</var>
+<arg>--user-data-dir=/tmp/chrome-profile</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.811712" elapsed="0.000144"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg1}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.811945" elapsed="0.000141"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg2}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.812176" elapsed="0.000137"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg3}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.812403" elapsed="0.000131"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg4}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.812627" elapsed="0.000135"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-07-30T23:18:48.813013" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-07-30T23:18:48.812857" elapsed="3.508700"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-07-30T23:18:52.322479" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-30T23:05:23.789977" elapsed="4.857878"/>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-07-30T23:18:52.322070" elapsed="0.803521"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-30T23:05:28.648407" elapsed="0.410959"/>
+<status status="PASS" start="2025-07-30T23:18:53.125812" elapsed="0.020837"/>
 </kw>
-<status status="PASS" start="2025-07-30T23:05:23.789387" elapsed="5.270192"/>
+<status status="PASS" start="2025-07-30T23:18:48.809985" elapsed="4.336968"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-30T23:05:29.060037" elapsed="0.095689"/>
+<status status="PASS" start="2025-07-30T23:18:53.147617" elapsed="0.219848"/>
 </kw>
-<status status="PASS" start="2025-07-30T23:05:23.788871" elapsed="5.367055"/>
+<status status="PASS" start="2025-07-30T23:18:48.809436" elapsed="4.558180"/>
 </test>
-<status status="PASS" start="2025-07-30T23:05:23.514132" elapsed="5.642410"/>
+<status status="PASS" start="2025-07-30T23:18:48.669819" elapsed="4.698388"/>
 </suite>
 <statistics>
 <total>

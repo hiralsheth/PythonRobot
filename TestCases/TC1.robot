@@ -35,12 +35,12 @@ Open Browser To Login Page
    # ${arg1}=       Set Variable    --headless=new
     ${arg2}=       Set Variable    --no-sandbox
     ${arg3}=       Set Variable    --disable-dev-shm-usage
-    ${arg4}=       Set Variable    --user-data-dir=/tmp/chrome-profile
+  #  ${arg4}=       Set Variable    --user-data-dir=/tmp/chrome-profile
 
    # Call Method    ${options}    add_argument    ${arg1}
     Call Method    ${options}    add_argument    ${arg2}
     Call Method    ${options}    add_argument    ${arg3}
-    Call Method    ${options}    add_argument    ${arg4}
+ #   Call Method    ${options}    add_argument    ${arg4}
 
     Create WebDriver    Chrome    options=${options}
     Delete All Cookies

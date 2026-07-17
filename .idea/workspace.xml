@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1850a25e-f8fe-4fc9-9f5b-dc8ddee05371" name="Changes" comment="Robot framework CI/CD pipeline">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestCases/TC1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/TC1.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,18 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "hiralsheth"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hiralsheth&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/hiralsheth/PythonRobot.git",
-    "accountId": "16fa4859-d8d6-4b00-8efe-abe42b5af7bc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hiralsheth/PythonRobot.git&quot;,
+    &quot;accountId&quot;: &quot;16fa4859-d8d6-4b00-8efe-abe42b5af7bc&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -36,17 +40,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": []
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: []
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.github/workflows" />
@@ -156,7 +160,31 @@
       <option name="project" value="LOCAL" />
       <updated>1753930529928</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Robot framework CI/CD pipeline">
+      <option name="closed" value="true" />
+      <created>1753931165012</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1753931165012</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Robot framework CI/CD pipeline">
+      <option name="closed" value="true" />
+      <created>1753931503940</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753931503940</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Robot framework CI/CD pipeline">
+      <option name="closed" value="true" />
+      <created>1753931953133</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753931953133</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
