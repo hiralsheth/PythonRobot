@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# IDE - PyCharm / IntelliJ
+.idea/
+
+# Robot Framework generated outputs
+results/
+TestCases/log.html
+TestCases/report.html
+TestCases/output.xml
+TestCases/output*.xml
+TestCases/*.png
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+.env

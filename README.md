@@ -22,6 +22,10 @@ Current test suite:
 │       └── robot-tests.yml
 ├── TestCases/
 │   └── TC1.robot
+├── results/               ← generated after test run (gitignored)
+│   ├── log.html
+│   ├── report.html
+│   └── output.xml
 ├── requirements.txt
 └── README.md
 ```
