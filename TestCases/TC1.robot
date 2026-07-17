@@ -25,23 +25,17 @@ LoginTest with valid credentials
 *** Keywords ***
 Open Browser To Login Page
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-   # ${arg1}=       Set Variable    --headless=new
-    ${arg2}=       Set Variable    --no-sandbox
-    ${arg3}=       Set Variable    --disable-dev-shm-usage
-  #  ${arg4}=       Set Variable    --user-data-dir=/tmp/chrome-profile
 
-   # Call Method    ${options}    add_argument    ${arg1}
-    Call Method    ${options}    add_argument    ${arg2}
-    Call Method    ${options}    add_argument    ${arg3}
- #   Call Method    ${options}    add_argument    ${arg4}
+    Call Method    ${options}    add_argument    --headless=new
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
 
-    Create WebDriver    Chrome    options=${options}
-    Delete All Cookies
-    Go To    ${URL}
+    Open Browser
+    ...    ${URL}
+    ...    browser=${BROWSER}
+    ...    options=${options}
+
     Maximize Browser Window
-
-
-
 
 
 
